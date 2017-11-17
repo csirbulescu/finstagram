@@ -1,5 +1,5 @@
-
 get '/' do
+    
    @post_shark = {
        username: "sharky_j",
        avatar_url: "http://naserca.com/images/sharky_j.jpg",
@@ -38,9 +38,8 @@ get '/' do
            text: "lunchtime!"
        }]
  }
- 
- [@post_shark, @post_whale, @post_marlin].to_s
- 
+
+ @posts = [@post_shark, @post_whale, @post_marlin]
    
-    erb(:index)
+    erb :index
 end
